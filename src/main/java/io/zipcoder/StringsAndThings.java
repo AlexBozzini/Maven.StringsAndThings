@@ -14,9 +14,26 @@ public class StringsAndThings {
      *           countYZ("day fez"); // Should return 2
      *           countYZ("day fyyyz"); // Should return 2
      */
-    public Integer countYZ(String input){
-        return null;
+    public Integer countYZ(String input) {
+        Integer count = 0;
+        for (int i = 0; i < input.length(); i++) {
+//           if (yz && (is last char || is not letter))
+
+
+            //if is last char
+//                if last char is y or z
+//           increment count
+//           else if next character is a not a letter
+//           count++
+            char c = input.charAt(i);
+            if ((c == 'y' || c == 'z') && (i == (input.length()-1) || !Character.isLetter(input.charAt(i + 1)))) {
+                count++;
+            }
+
+        }
+        return count;
     }
+
 
     /**
      * Given two strings, base and remove, return a version of the base string where all instances of the remove string have
