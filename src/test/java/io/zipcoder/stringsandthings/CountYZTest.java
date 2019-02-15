@@ -36,6 +36,7 @@ public class CountYZTest {
 
     @Test
     public void countYZTest3 (){
+        System.out.println(Character.isLetter('.'));
         String input = "day fyyyz";
         Integer expected = 2;
         Integer actual = stringsAndThings.countYZ(input);
