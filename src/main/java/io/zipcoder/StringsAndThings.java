@@ -61,7 +61,24 @@ public class StringsAndThings {
 
 
     public Boolean containsEqualNumberOfIsAndNot(String input) {
-        return null;
+        Integer isCount = 0;
+        Integer notCount = 0;
+        for (int i = 0; i < input.length() - 1; i++) {
+            if (input.charAt(i) == 'i' && input.charAt(i + 1) == 's') {
+                isCount++;
+            }
+
+        }
+        for (int j = 0; j < input.length() - 2; j++) {
+            if (input.charAt(j) == 'n' && input.charAt(j + 1) == 'o' && input.charAt(j + 2) == 't') {
+                notCount++;
+            }
+        }
+        if (isCount == notCount) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
 
